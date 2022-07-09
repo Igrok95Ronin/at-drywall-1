@@ -12,9 +12,8 @@ li{
     padding: 0;
 }
 .container {
-    max-width: 1170px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
 }
 
 body{
@@ -25,4 +24,59 @@ body{
     max-width: 1920px;
     min-width: 320px;
     color: #7a7a7a;
+}
+
+$primaryColor: #289D28;
+
+//header
+.header {
+    background-color: #000;
+}
+.header__top {
+    height: 42px;
+    background-color: $primaryColor;
+}
+.header__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__logo {
+}
+.btn {
+    color: #fff;
+    border: 1px solid #fff;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    padding-left: 40px;
+    border-radius: 3px;
+    position: relative;
+    transition: all .5s;
+    &::before {
+        content: '';
+        position: absolute;
+        background-image: url(../img/telephone-fill.svg);
+        width: 18px;
+        height: 18px;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all .5s;
+    }
+    &:hover {
+        color: #fff;
+        background-color: $primaryColor;
+        border: 1px solid transparent;
+        transition: all 1s;
+        &::before {
+            content: '';
+            position: absolute;
+            background-image: url(../img/telephone-filloriginal.svg);
+            width: 18px;
+            height: 18px;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
 }

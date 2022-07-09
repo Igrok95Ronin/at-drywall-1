@@ -16,9 +16,8 @@ li {
 }
 
 .container {
-  max-width: 1170px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 15px;
 }
 
 body {
@@ -29,4 +28,73 @@ body {
   max-width: 1920px;
   min-width: 320px;
   color: #7a7a7a;
+}
+
+.header {
+  background-color: #000;
+}
+
+.header__top {
+  height: 42px;
+  background-color: #289D28;
+}
+
+.header__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.btn {
+  color: #fff;
+  border: 1px solid #fff;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding-left: 40px;
+  border-radius: 3px;
+  position: relative;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  background-image: url(../img/telephone-fill.svg);
+  width: 18px;
+  height: 18px;
+  left: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.btn:hover {
+  color: #fff;
+  background-color: #289D28;
+  border: 1px solid transparent;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+.btn:hover::before {
+  content: "";
+  position: absolute;
+  background-image: url(../img/telephone-filloriginal.svg);
+  width: 18px;
+  height: 18px;
+  left: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
