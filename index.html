@@ -47,32 +47,68 @@ $title = $text . ' ' . $city;
                     <div class="col-12 container">
                         <div class="slider__box">
                             <h1 class="slider__title">Trockenbaumonteur</h1>
-                            <p class="slider__descr">Trockenbau in deiner stadt benötigt? Höchste Qualität zu fairen Preisen für Trockenbauarbeiten.
+                            <p class="slider__descr">Trockenbau in deiner stadt benötigt? Höchste Qualität zu fairen
+                                Preisen für Trockenbauarbeiten.
                                 Vom Kleinstauftrag bis zum Hotelausbau – wir lieben Trockenbau.</p>
-                            <a class="btn" href="#" >111222333</a>
+                            <a class="btn" href="#">111222333</a>
                         </div>
                     </div>
                 </div>
+            </div>
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide"></div>
                 </div>
-                        <!-- Slider main container -->
-                        <div class="swiper">
-                            <!-- Additional required wrapper -->
-                            <div class="swiper-wrapper">
-                                <!-- Slides -->
-                                <div class="swiper-slide"></div>
-                                <div class="swiper-slide"></div>
-                                <div class="swiper-slide"></div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </section>
+        <section class="services">
+            <div class="container-fluid ">
+                <div class="row">
+                    <div class="col-12 container services--position">
+                        <div class="services__items">
+                            <div class="services__item">
+                                <div class="services__inner">
+                                    <h2 class="services__title">Fachbetrieb für Trockenbau</h2>
+                                    <p class="services__descr">Trockenbauplatten aus unterschiedlichen Materialien bzw.
+                                        mit
+                                        verschiedenen Veredelungen</p>
+                                    <div class="services__img"></div>
+                                </div>
                             </div>
-                            <!-- If we need pagination -->
-                            <div class="swiper-pagination"></div>
-
-                            <!-- If we need navigation buttons -->
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-button-next"></div>
-
-                            <!-- If we need scrollbar -->
-                            <div class="swiper-scrollbar"></div>
+                            <div class="services__item">
+                                <div class="services__inner">
+                                    <h2 class="services__title">Trockenbaumonteur</h2>
+                                    <p class="services__descr">Weitere wichtige Eigenschaften: Gipskartonplatten
+                                        regulieren das Raumklima</p>
+                                    <div class="services__img"></div>
+                                </div>
+                            </div>
+                            <div class="services__item">
+                                <div class="services__inner">
+                                    <h2 class="services__title">Trockenbau</h2>
+                                    <p class="services__descr"> Ihre Trockenbauprofis mit langjähriger handwerklicher
+                                        Erfahrung</p>
+                                    <div class="services__img"></div>
+                                </div>
+                            </div>
                         </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <!--Нижний колонтитул страницы-->
@@ -100,31 +136,31 @@ $title = $text . ' ' . $city;
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script>
         const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: false,
-  effect: 'flip',
-  speed: 1000,
-  autoplay: {
-   delay: 3000,
- },
+            // Optional parameters
+            direction: 'horizontal',
+            loop: false,
+            effect: 'cube',
+            speed: 1000,
+            autoplay: {
+                delay: 3000,
+            },
 
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
 
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
 
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
-});
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
     </script>
 
 </body>
