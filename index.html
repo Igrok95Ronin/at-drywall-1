@@ -25,7 +25,6 @@ $title = $text . ' ' . $city;
 <body>
 
 
-    <!--Шапка сайта-->
     <header class="header">
         <div class="container-fluid">
             <div class="row">
@@ -35,27 +34,45 @@ $title = $text . ' ' . $city;
                         <div class="header__logo">
                             <img src="assets/img/logo.png" alt="">
                         </div>
-                        <a class="btn" href="#" >111222333</a>
+                        <a class="btn" href="#">111222333</a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-    <!-- Основное содержимое страницы -->
     <main class="main">
-        <h1 class="main__title">main</h1><!-- - h1-h6. -->
-        <!-- Раздел страницы-->
-        <section class="first-section">
-            <h2 class="first-section__title">section</h2><!-- + h2-h6... -->
-            <article class="first-article">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-12 container">
-                            <h2 class="first-article__title">article</h2><!-- + h2-h6... -->
+        <section class="slider">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 container">
+                        <div class="slider__box">
+                            <h1 class="slider__title">Trockenbaumonteur</h1>
+                            <p class="slider__descr">Trockenbau in deiner stadt benötigt? Höchste Qualität zu fairen Preisen für Trockenbauarbeiten.
+                                Vom Kleinstauftrag bis zum Hotelausbau – wir lieben Trockenbau.</p>
+                            <a class="btn" href="#" >111222333</a>
                         </div>
                     </div>
                 </div>
-            </article>
+                </div>
+                        <!-- Slider main container -->
+                        <div class="swiper">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide"></div>
+                                <div class="swiper-slide"></div>
+                                <div class="swiper-slide"></div>
+                            </div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>
+
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+
+                            <!-- If we need scrollbar -->
+                            <div class="swiper-scrollbar"></div>
+                        </div>
         </section>
     </main>
     <!--Нижний колонтитул страницы-->
@@ -76,8 +93,40 @@ $title = $text . ' ' . $city;
     </footer>
     <!--Style-->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
     <link href="assets/css/style.css" rel="stylesheet">
-    <script src="assets/css/bootstrap.bundle.min.js"></script>
+
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: false,
+  effect: 'flip',
+  speed: 1000,
+  autoplay: {
+   delay: 3000,
+ },
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+    </script>
+
 </body>
 
 </html>
