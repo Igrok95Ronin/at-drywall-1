@@ -30,7 +30,8 @@ $title = $text . ' ' . $city;
                 <div class="col-12 container">
                     <div class="header__bottom">
                         <div class="header__logo">
-                            <img src="assets/img/logo.png" alt="">
+                            <img class="logo" src="assets/img/logo.png" alt="">
+                            <img class="logoMini" src="assets/img/logo-mini.png" alt="">
                         </div>
                         <a class="btn" href="#">111222333</a>
                     </div>
@@ -39,7 +40,7 @@ $title = $text . ' ' . $city;
         </div>
     </header>
     <main class="main">
-        <section class="slider">
+       <section class="slider">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 container">
@@ -48,30 +49,25 @@ $title = $text . ' ' . $city;
                             <p class="slider__descr">Trockenbau in deiner stadt benötigt? Höchste Qualität zu fairen
                                 Preisen für Trockenbauarbeiten.
                                 Vom Kleinstauftrag bis zum Hotelausbau – wir lieben Trockenbau.</p>
-                            <a class="btn" href="#">111222333</a>
+                            <a class="btn btnNone" href="#">111222333</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Slider main container -->
             <div class="swiper">
-                <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
-                    <!-- Slides -->
                     <div class="swiper-slide"></div>
                     <div class="swiper-slide"></div>
                     <div class="swiper-slide"></div>
                 </div>
-                <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
 
-                <!-- If we need navigation buttons -->
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
 
             </div>
         </section>
-        <section class="services">
+    <section class="services">
             <div class="container-fluid ">
                 <div class="row">
                     <div class="col-12 container services--position">
@@ -106,7 +102,7 @@ $title = $text . ' ' . $city;
                 </div>
             </div>
         </section>
-        <section class="repair">
+            <section class="repair">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 container">
@@ -126,14 +122,13 @@ $title = $text . ' ' . $city;
                                     Ansprechpartner, den Sie brauchen und vielleicht schon gesucht haben.
                                     Gerne übernehmen wir den Trockenbau, die Fliesenverlegung, alle Spachtelarbeiten im
                                     Bau, während der Renovierung, Sanierung und Modernisierung.</p>
-                                <a class="btn2" href="">111222333</a>
+                                <a class="btn2" href=""><span>111222333</span></a>
                             </div>
                             <div class="repair__right">
                                 <div class="repair__big">
                                     <img class="repair__img" src="assets/img/max.jpg" alt="">
                                 </div>
                                 <div class="repair__small">
-                                    <!-- <img class="repair__small-img" src="assets/img/min.jpg" alt=""> -->
                                 </div>
                             </div>
                         </div>
@@ -141,7 +136,7 @@ $title = $text . ' ' . $city;
                 </div>
             </div>
         </section>
-        <section class="cover">
+         <section class="cover">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 container">
@@ -186,7 +181,7 @@ $title = $text . ' ' . $city;
                 </div>
             </div>
         </section>
-        <section class="list">
+      <section class="list">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 col-0">
@@ -232,7 +227,7 @@ $title = $text . ' ' . $city;
                 </div>
             </div>
         </section>
-        <section class="quality">
+       <section class="quality">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 container">
@@ -279,7 +274,7 @@ $title = $text . ' ' . $city;
                 </div>
             </div>
         </section>
-        <section class="work">
+      <section class="work">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 container">
@@ -308,7 +303,7 @@ $title = $text . ' ' . $city;
                 </div>
             </div>
         </section>
-        <section class="forms">
+         <section class="forms">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 container">
@@ -350,7 +345,7 @@ $title = $text . ' ' . $city;
                     </div>
                 </div>
             </div>
-        </section>
+        </section> 
     </main>
     <footer class="footer">
         <div class="container-fluid">
@@ -361,39 +356,8 @@ $title = $text . ' ' . $city;
     </footer>
     <!--Style-->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
     <link href="assets/css/style.css" rel="stylesheet">
-
-
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script>
-        const swiper = new Swiper('.swiper', {
-            // Optional parameters
-            direction: 'horizontal',
-            loop: false,
-            effect: 'cube',
-            speed: 1000,
-            autoplay: {
-                delay: 3000,
-            },
-
-            // If we need pagination
-            pagination: {
-                el: '.swiper-pagination',
-            },
-
-            // Navigation arrows
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-
-            // And if we need scrollbar
-            scrollbar: {
-                el: '.swiper-scrollbar',
-            },
-        });
-    </script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
