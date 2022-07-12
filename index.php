@@ -4,15 +4,14 @@ $site_data      = json_decode(file_get_contents('http://templates.jquery.link/ap
 $phone_name     = $site_data['phone_name'];
 $phone_href     = $site_data['phone_href'];
 
-$text           = str_replace('+', ' ', trim($_GET['t'] ?? 'Entrumpelung'));
-$city           = str_replace('+', ' ', trim($_GET['n'] ?? 'in der nahe'));
+$text           = str_replace('+', ' ', trim($_GET['t'] ?? 'Trockenbaumonteur'));
+$city           = str_replace('+', ' ', trim($_GET['n'] ?? ''));
 
 $title = $text . ' ' . $city;
 ?>
 
 <!DOCTYPE html>
 <html lang="at">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,7 +20,6 @@ $title = $text . ' ' . $city;
     <?= $site_data['html'] ?>
     <title><?= $title ?></title>
 </head>
-
 <body>
     <header class="header">
         <div class="container-fluid">
@@ -33,23 +31,23 @@ $title = $text . ' ' . $city;
                             <img class="logo" src="assets/img/logo.png" alt="">
                             <img class="logoMini" src="assets/img/logo-mini.png" alt="">
                         </div>
-                        <a class="btn" href="#">111222333</a>
+                        <a class="btn" href="<?= $phone_href ?>"><?= $phone_name ?></a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
     <main class="main">
-       <section class="slider">
+        <section class="slider">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 container">
                         <div class="slider__box">
-                            <h1 class="slider__title">Trockenbaumonteur</h1>
+                            <h1 class="slider__title"><?= $title ?></h1>
                             <p class="slider__descr">Trockenbau in deiner stadt benötigt? Höchste Qualität zu fairen
                                 Preisen für Trockenbauarbeiten.
                                 Vom Kleinstauftrag bis zum Hotelausbau – wir lieben Trockenbau.</p>
-                            <a class="btn btnNone" href="#">111222333</a>
+                            <a class="btn btnNone" href="<?= $phone_href ?>"><?= $phone_name ?></a>
                         </div>
                     </div>
                 </div>
@@ -67,7 +65,7 @@ $title = $text . ' ' . $city;
 
             </div>
         </section>
-    <section class="services">
+        <section class="services">
             <div class="container-fluid ">
                 <div class="row">
                     <div class="col-12 container services--position">
@@ -102,7 +100,7 @@ $title = $text . ' ' . $city;
                 </div>
             </div>
         </section>
-            <section class="repair">
+        <section class="repair">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 container">
@@ -122,7 +120,7 @@ $title = $text . ' ' . $city;
                                     Ansprechpartner, den Sie brauchen und vielleicht schon gesucht haben.
                                     Gerne übernehmen wir den Trockenbau, die Fliesenverlegung, alle Spachtelarbeiten im
                                     Bau, während der Renovierung, Sanierung und Modernisierung.</p>
-                                <a class="btn2" href=""><span>111222333</span></a>
+                                <a class="btn2" href="<?= $phone_href ?>"><span><?= $phone_name ?></span></a>
                             </div>
                             <div class="repair__right">
                                 <div class="repair__big">
@@ -136,7 +134,7 @@ $title = $text . ' ' . $city;
                 </div>
             </div>
         </section>
-         <section class="cover">
+        <section class="cover">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 container">
@@ -181,7 +179,7 @@ $title = $text . ' ' . $city;
                 </div>
             </div>
         </section>
-      <section class="list">
+        <section class="list">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 col-0">
@@ -227,11 +225,11 @@ $title = $text . ' ' . $city;
                 </div>
             </div>
         </section>
-       <section class="quality">
+        <section class="quality">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 container">
-                        <div class="quality__title">Qualitätsstufen der </div>
+                        <h2 class="quality__title">Qualitätsstufen der </h2>
                         <div class="quality__box">
                             <div class="quality__wrapper">
                                 <div class="quality__img">
@@ -239,7 +237,8 @@ $title = $text . ' ' . $city;
                                 </div>
                                 <div class="quality__inner">
                                     <div class="quality__name">Q1</div>
-                                    <div class="quality__text">Geeignet zur Weiterbearbeitung wie Fliesen verlegen, Strukturputz verputzen usw.</div>
+                                    <div class="quality__text">Geeignet zur Weiterbearbeitung wie Fliesen verlegen,
+                                        Strukturputz verputzen usw.</div>
                                 </div>
                             </div>
                             <div class="quality__wrapper">
@@ -248,7 +247,8 @@ $title = $text . ' ' . $city;
                                 </div>
                                 <div class="quality__inner">
                                     <div class="quality__name">Q2</div>
-                                    <div class="quality__text">Schwere bis mittelschwere Tapeten, Dispersionsfarbe (Lammfellrolle) usw.</div>
+                                    <div class="quality__text">Schwere bis mittelschwere Tapeten, Dispersionsfarbe
+                                        (Lammfellrolle) usw.</div>
                                 </div>
                             </div>
                             <div class="quality__wrapper">
@@ -257,7 +257,8 @@ $title = $text . ' ' . $city;
                                 </div>
                                 <div class="quality__inner">
                                     <div class="quality__name">Q3</div>
-                                    <div class="quality__text">Feine, filigrane Tapeten, Feinputze (Körnung kleiner 1mm), matt streichen</div>
+                                    <div class="quality__text">Feine, filigrane Tapeten, Feinputze (Körnung kleiner
+                                        1mm), matt streichen</div>
                                 </div>
                             </div>
                             <div class="quality__wrapper">
@@ -274,11 +275,12 @@ $title = $text . ' ' . $city;
                 </div>
             </div>
         </section>
-      <section class="work">
+        <section class="work">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 container">
-                        <h2 class="work__title">Unsere Arbeit <span>Wir optimieren die Reparatur passend zu Ihrem Budget!</span> </h2>
+                        <h2 class="work__title">Unsere Arbeit <span>Wir optimieren die Reparatur passend zu Ihrem
+                                Budget!</span> </h2>
                         <div class="work__box">
                             <div class="work__img">
                                 <img src="assets/img/1.jpg" alt="">
@@ -303,22 +305,25 @@ $title = $text . ' ' . $city;
                 </div>
             </div>
         </section>
-         <section class="forms">
+        <section class="forms">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 container">
                         <h2 class="forms__title">Kontaktieren Sie uns:</h2>
                         <div class="forms__box">
                             <div class="forms__left">
-
                                 <form id="jq_form" class="mt-5">
                                     <div class="my-3">
                                         <input class="form-control" placeholder="Vorname" name="jq_name" type="text">
-                                        <div id="jq_name" style="font-weight:700;font-size:15px;color:#fff;padding-top:2px;display:none">Dies ist ein Pflichtfeld.</div>
+                                        <div id="jq_name"
+                                            style="font-weight:700;font-size:15px;color:#fff;padding-top:2px;display:none">
+                                            Dies ist ein Pflichtfeld.</div>
                                     </div>
                                     <div class="my-4">
                                         <input class="form-control" placeholder="Telefon" name="jq_phone" type="text">
-                                        <div id="jq_phone" style="font-weight:700;font-size:15px;color:#fff;padding-top:2px;display:none">Dies ist ein Pflichtfeld.</div>
+                                        <div id="jq_phone"
+                                            style="font-weight:700;font-size:15px;color:#fff;padding-top:2px;display:none">
+                                            Dies ist ein Pflichtfeld.</div>
                                     </div>
                                     <div class="my-4">
                                         <input class="form-control" placeholder="Straße" name="jq_street" type="text">
@@ -327,14 +332,20 @@ $title = $text . ' ' . $city;
                                         <input class="form-control" placeholder="PLZ / Ort" name="jq_city" type="text">
                                     </div>
                                     <div class="my-4">
-                                        <input class="form-control" placeholder="E-Mail" name="jq_email" type="text"> 
+                                        <input class="form-control" placeholder="E-Mail" name="jq_email" type="text">
                                     </div>
                                     <div class="my-4">
-                                        <textarea rows="3" class="form-control" name="jq_text" placeholder="Nachricht"></textarea>
-                                        <div id="jq_text" style="font-weight:700;font-size:15px;color:#fff;padding-top:2px;display:none">Dies ist ein Pflichtfeld.</div>
+                                        <textarea rows="3" class="form-control" name="jq_text"
+                                            placeholder="Nachricht"></textarea>
+                                        <div id="jq_text"
+                                            style="font-weight:700;font-size:15px;color:#fff;padding-top:2px;display:none">
+                                            Dies ist ein Pflichtfeld.</div>
                                     </div>
-                                    <div class="wer"><input class="btn  text-uppercase fw-bold mb-5 px-3 py-2 forms__button" type="submit" id="jq_submit" value="Senden"> </div>
-                                    <div id="jq_success" style="display:none">Vielen Dank für deine Nachricht. Sie wurde gesendet.</div>
+                                    <div class="wer"><input
+                                            class="btn  text-uppercase fw-bold mb-5 px-3 py-2 forms__button"
+                                            type="submit" id="jq_submit" value="Senden"> </div>
+                                    <div id="jq_success" style="display:none">Vielen Dank für deine Nachricht. Sie wurde
+                                        gesendet.</div>
                                 </form>
 
                             </div>
@@ -345,7 +356,7 @@ $title = $text . ' ' . $city;
                     </div>
                 </div>
             </div>
-        </section> 
+        </section>
     </main>
     <footer class="footer">
         <div class="container-fluid">
@@ -358,7 +369,5 @@ $title = $text . ' ' . $city;
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-
 </body>
-
 </html>
